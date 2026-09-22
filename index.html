@@ -40,6 +40,19 @@ body{background:#041e18}
 button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #a5f4df;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+
+/* Emphasize the selected serving vessel. */
+.cups>.ceramic,.cups>.paper-cup{cursor:pointer;transform-origin:50% 85%;transition:transform .28s ease,filter .28s ease;outline-offset:5px}
+.cups>.ceramic{transform:rotate(-5deg) scale(1.12);filter:brightness(1.08) drop-shadow(0 12px 16px rgba(103,215,197,.3));z-index:2}
+.cups>.paper-cup{transform:rotate(7deg) scale(.86);filter:brightness(.56) saturate(.7);z-index:1}
+.cups[data-mode="away"]>.ceramic{transform:rotate(-5deg) scale(.86);filter:brightness(.56) saturate(.7);z-index:1}
+.cups[data-mode="away"]>.paper-cup{transform:rotate(3deg) scale(1.12);filter:brightness(1.08) drop-shadow(0 12px 16px rgba(103,215,197,.3));z-index:2}
+.service{transform:scale(.96);filter:brightness(.7);transition:transform .28s ease,filter .28s ease,box-shadow .28s ease}
+.service.active{transform:scale(1.02);filter:brightness(1);box-shadow:0 4px 16px rgba(103,215,197,.2)}
+.service .ico{display:inline-block;transform:scale(.9);transition:transform .28s ease}
+.service.active .ico{transform:scale(1.18)}
+.cups>[role="button"]:focus-visible{outline:3px solid #a5f4df;border-radius:10px}
+@media(prefers-reduced-motion:reduce){.cups>.ceramic,.cups>.paper-cup,.service,.service .ico{transition:none}}
 </style></head><body id="top"><div class="app">
 <header class="hero"><div class="brand"><img class="logo" src="assets/vero-pvc-logo-hd.webp" alt="لوگوی VERO"><small>COFFEE · ROASTERY</small></div><p class="eyebrow">FRESHLY BREWED FOR YOU</p><h1>یک فنجان حالِ خوب،<br>به سبک VERO</h1><p class="hero-copy">برای ماندن در کافه یا بردن در مسیر؛ نوشیدنی دلخواهت را انتخاب کن.</p><div class="cups" aria-label="سرو داخل کافه و بیرون‌بر"><img class="ceramic" src="assets/latte-cup-3d.webp" alt="کاپ سرامیکی تیفانی VERO"><div class="paper-cup" role="img" aria-label="لیوان یکبارمصرف تیفانی VERO"><div class="lid"></div><div class="cup-body"><span class="cup-mark">V<small>VERO</small></span></div></div></div></header>
 <section class="service-wrap" aria-label="انتخاب نوع سرو"><div class="service-title"><strong>نحوه سرو را انتخاب کن</strong><span>برای نمایش لیوان مناسب</span></div><div class="service-options"><button class="service active" data-mode="here"><span class="ico">☕</span><b>سرو در کافه</b><small>کاپ سرامیکی تیفانی</small></button><button class="service" data-mode="away"><span class="ico">🥤</span><b>بیرون‌بر</b><small>لیوان یکبارمصرف VERO</small></button></div></section>
@@ -67,8 +80,21 @@ services.forEach(button=>{
   services.forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});
   button.classList.add('active');button.setAttribute('aria-pressed','true');
   const away=button.dataset.mode==='away';
+  document.querySelector('.cups').dataset.mode=button.dataset.mode;
+  document.querySelectorAll('.cups>[role="button"]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.mode===button.dataset.mode)));
   label.textContent=away?'سرو در لیوان بیرون‌بر VERO':'سرو در کاپ تیفانی';
   latteImg.hidden=away;awayCup.hidden=!away;
  });
+});
+
+const heroCups=document.querySelector('.cups');
+heroCups.dataset.mode='here';
+[['.ceramic','here','انتخاب کاپ؛ سرو در کافه'],['.paper-cup','away','انتخاب لیوان بیرون‌بر']].forEach(([selector,mode,name])=>{
+ const vessel=heroCups.querySelector(selector);
+ vessel.setAttribute('role','button');vessel.setAttribute('tabindex','0');
+ vessel.setAttribute('aria-label',name);vessel.setAttribute('aria-pressed',String(mode==='here'));vessel.dataset.mode=mode;
+ const select=()=>services.find(x=>x.dataset.mode===mode).click();
+ vessel.addEventListener('click',select);
+ vessel.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();select()}});
 });
 </script></body></html>
