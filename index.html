@@ -74,6 +74,17 @@ body{background:#031912}
 .sticky{background:rgba(6,39,31,.97)}
 @media(max-width:430px){.hero{min-height:460px}.cups{left:9px;transform:scale(.76)}.hero-copy{right:14px;bottom:77px}}
 @media(max-width:360px){.cups{left:8px;transform:scale(.64)}.hero-copy{right:12px;bottom:75px}.hero{min-height:435px}}
+
+/* Subtle espresso outlines; preserve existing layout and content. */
+:root{--espresso-outline:#563a2e;--espresso-inner:rgba(86,58,46,.48)}
+.tab,.tab.active,.service,.service.active,.item,.search{border-color:var(--espresso-outline)}
+.feature{box-shadow:inset 0 0 0 1px var(--espresso-outline),0 8px 22px rgba(0,15,10,.18)}
+.service-wrap{box-shadow:inset 0 0 0 1px var(--espresso-outline),var(--shadow)}
+.brand{isolation:isolate}
+.brand::before,.brand::after{content:"";position:absolute;left:50%;pointer-events:none;transform:translateX(-50%);z-index:-1}
+.brand::before{top:-7px;bottom:-7px;width:calc(clamp(205px,57vw,245px) + 26px);border:1px solid var(--espresso-outline);border-radius:26px 10px 26px 10px;box-shadow:0 6px 18px rgba(20,12,8,.13)}
+.brand::after{top:-2px;bottom:-2px;width:calc(clamp(205px,57vw,245px) + 16px);border:1px solid var(--espresso-inner);border-radius:21px 6px 21px 6px}
+
 </style>
 <!-- Embedded Vazirmatn font license:
 Copyright 2015 The Vazirmatn Project Authors (https://github.com/rastikerdar/vazirmatn)
