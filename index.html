@@ -1,28 +1,81 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#06382c">
-  <meta name="description" content="منوی آنلاین VERO Coffee & Roastery">
-  <title>VERO Coffee — QR Menu</title>
-  <style>
-    *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;background:#032e24}
-    body{display:flex;justify-content:center}
-    .menu{position:relative;width:min(100%,1024px);line-height:0;overflow:hidden;box-shadow:0 0 70px rgba(0,0,0,.42)}
-    .menu-image{display:block;width:100%;height:auto}
-    .logo-replacement{position:absolute;z-index:2;left:2.5%;top:2.25%;width:25.3%;height:8%;display:grid;place-items:center;background:linear-gradient(180deg,#032419 0%,#032318 58%,#022017 100%);-webkit-mask-image:radial-gradient(ellipse 72% 76% at center,#000 70%,transparent 100%);mask-image:radial-gradient(ellipse 72% 76% at center,#000 70%,transparent 100%)}
-    .logo-replacement img{display:block;width:94%;height:94%;object-fit:contain;filter:brightness(0) invert(88%) sepia(18%) saturate(490%) hue-rotate(352deg) brightness(94%) contrast(90%)}
-    @media(max-width:520px){.menu{width:100%}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#032e24">
+<meta name="description" content="منوی آنلاین VERO Coffee & Roastery">
+<title>VERO Coffee — QR Menu</title>
+<style>
+:root{--deep:#032e24;--green:#074536;--green2:#0b5b48;--cream:#d9c9a6;--line:rgba(217,201,166,.34)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#021f18;color:var(--cream);font-family:Tahoma,"Segoe UI",sans-serif}
+.phone{width:min(100%,480px);margin:auto;min-height:100vh;background:var(--deep);box-shadow:0 0 70px #0009;overflow:hidden}
+.top{position:relative;z-index:20;padding:13px 16px 14px;background:linear-gradient(145deg,#032e24,#064032);border-bottom:1px solid var(--line)}
+.brand{height:80px;display:grid;place-items:center}.brand img{display:block;width:190px;height:76px;object-fit:contain;filter:brightness(0) invert(88%) sepia(18%) saturate(490%) hue-rotate(352deg) brightness(94%) contrast(90%)}
+.choose-title{text-align:center;margin:3px 0 9px;font-size:.72rem;letter-spacing:.04em}.choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.choice{height:78px;border:1px solid var(--line);border-radius:16px;background:#073c30;color:#e8dcc2;font:inherit;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer}.choice.active{background:#e0d0ad;color:#07362b;box-shadow:0 8px 20px #0004}.choice b{display:block;font-size:.78rem}.choice small{display:block;margin-top:3px;font-size:.58rem;opacity:.75}
+.mini-cup{width:52px;height:52px;object-fit:contain}.takeaway{position:relative;width:35px;height:48px;background:linear-gradient(90deg,#0c4b3c,#16715a);clip-path:polygon(5% 0,95% 0,83% 100%,17% 100%)}.takeaway:before{content:"";position:absolute;left:-3px;right:-3px;top:0;height:7px;background:#eadfc8;border-radius:4px}.takeaway:after{content:"V";position:absolute;inset:15px 0 auto;text-align:center;color:#ddcda9;font:700 1rem Georgia}
+.menu-wrap{position:relative;direction:ltr;line-height:0}.menu-image{display:block;width:100%;height:auto}
+.logo-cover{position:absolute;z-index:4;left:2.2%;top:2%;width:26.5%;height:8.6%;display:grid;place-items:center;background:radial-gradient(ellipse,#03251a 62%,rgba(3,35,24,.92) 82%,transparent 100%)}.logo-cover img{width:94%;height:94%;object-fit:contain;filter:brightness(0) invert(88%) sepia(18%) saturate(490%) hue-rotate(352deg) brightness(94%) contrast(90%)}
+.hotspot{position:absolute;z-index:8;left:1.5%;width:21.5%;height:4.7%;border:0;border-radius:999px;background:transparent;cursor:pointer}.hotspot.active{outline:2px solid rgba(220,205,170,.72);background:rgba(15,91,72,.22)}.h-hot{top:19.1%}.h-iced{top:24.8%}.h-non{top:30.3%}.h-tea{top:35.7%}.h-dessert{top:40.9%}.h-food{top:46.3%}.h-beans{top:51.6%;height:5.6%}
+.switch-layer{position:absolute;z-index:5;background:#06382d;overflow:hidden;transition:opacity .18s}.switch-layer svg{display:block;width:100%;height:100%}.switch-layer image{image-rendering:auto}.switch-layer[hidden]{display:none}
+.quick-link{position:absolute;z-index:8;bottom:1.7%;height:5%;border:0;background:transparent;cursor:pointer}.wifi{left:24.5%;width:19%}.instagram{left:43.5%;width:18%}.location{left:62%;width:19%}
+.toast{position:fixed;z-index:50;left:50%;bottom:22px;transform:translate(-50%,20px);width:min(88%,390px);padding:12px 15px;border:1px solid var(--line);border-radius:14px;background:rgba(2,32,24,.96);color:#f0e5ce;text-align:center;font-size:.72rem;line-height:1.8;opacity:0;pointer-events:none;transition:.22s}.toast.show{opacity:1;transform:translate(-50%,0)}
+.category-card{position:fixed;z-index:40;inset:auto 50% 22px auto;transform:translateX(50%) translateY(20px);width:min(88%,400px);padding:17px;border:1px solid var(--line);border-radius:18px;background:rgba(3,46,36,.97);box-shadow:0 15px 40px #0008;opacity:0;pointer-events:none;transition:.22s;text-align:right;line-height:1.8}.category-card.show{opacity:1;transform:translateX(50%);pointer-events:auto}.category-card strong{display:block;color:#fff;font-size:1rem}.category-card span{font-size:.7rem}.category-card button{float:left;border:1px solid var(--line);border-radius:999px;background:transparent;color:#eadfc8;padding:5px 10px}
+@media(min-width:700px){.phone{margin-block:22px;border-radius:26px}.top{border-radius:26px 26px 0 0}}
+</style>
 </head>
-<body>
-  <main class="menu" aria-label="منوی کافه VERO">
-    <img class="menu-image" src="assets/vero-menu-original.png" alt="منوی کامل VERO Coffee">
-    <div class="logo-replacement" aria-label="لوگوی VERO Coffee Shop">
-      <img src="assets/vero-pvc-logo-hd.webp" alt="VERO Coffee Shop">
-    </div>
-  </main>
-</body>
-</html>
+<body><div class="phone">
+<header class="top">
+  <div class="brand"><img src="assets/vero-pvc-logo-hd.webp" alt="لوگوی کامل VERO Coffee Shop"></div>
+  <p class="choose-title">نوع سرو را انتخاب کنید</p>
+  <div class="choices">
+    <button class="choice active" data-service="here"><img class="mini-cup" src="assets/latte-cup-3d.webp" alt=""><span><b>کاپ کافه</b><small>سرو داخل کافه</small></span></button>
+    <button class="choice" data-service="away"><span class="takeaway" aria-hidden="true"></span><span><b>بیرون‌بر</b><small>لیوان Take Away</small></span></button>
+  </div>
+</header>
+<main class="menu-wrap" id="menu">
+  <img class="menu-image" src="assets/vero-menu-original.png" alt="منوی کامل VERO Coffee">
+  <div class="logo-cover"><img src="assets/vero-pvc-logo-hd.webp" alt="VERO Coffee Shop"></div>
+  <button class="hotspot h-hot active" data-category="Hot Coffee" aria-label="قهوه گرم"></button>
+  <button class="hotspot h-iced" data-category="Iced Coffee" aria-label="قهوه سرد"></button>
+  <button class="hotspot h-non" data-category="Non Coffee" aria-label="نوشیدنی بدون قهوه"></button>
+  <button class="hotspot h-tea" data-category="Tea" aria-label="چای"></button>
+  <button class="hotspot h-dessert" data-category="Dessert" aria-label="دسر"></button>
+  <button class="hotspot h-food" data-category="Food" aria-label="غذا"></button>
+  <button class="hotspot h-beans" data-category="Beans & Products" aria-label="دانه قهوه و محصولات"></button>
+  <button class="quick-link wifi" data-info="رمز وای‌فای هنوز ثبت نشده است." aria-label="وای فای"></button>
+  <button class="quick-link instagram" data-info="آدرس اینستاگرام را بفرستید تا این دکمه به صفحه شما وصل شود." aria-label="اینستاگرام"></button>
+  <button class="quick-link location" data-info="لینک لوکیشن را بفرستید تا این دکمه مسیریابی را باز کند." aria-label="لوکیشن"></button>
+</main>
+</div>
+<div class="toast" role="status"></div>
+<div class="category-card"><button type="button">بستن</button><strong></strong><span></span></div>
+<script>
+const master='assets/vero-menu-original.png';
+const cells=[
+ {target:[25.4,17.8,23.5,11.5],here:[346,305,150,145],away:[258,270,123,180]},
+ {target:[50.2,17.8,23.2,11.5],here:[596,300,155,155],away:[510,270,125,180]},
+ {target:[75.2,17.8,23.3,11.5],here:[842,300,170,155],away:[765,270,125,180]},
+ {target:[25.4,35.8,23.5,11.5],here:[340,570,160,165],away:[258,548,125,180]},
+ {target:[50.2,35.8,23.2,11.5],here:[594,570,160,165],away:[510,548,125,180]},
+ {target:[75.2,35.8,23.3,11.5],here:[842,558,175,180],away:[765,548,125,180]},
+ {target:[25.4,54.2,23.5,11.2],here:[338,840,165,170],away:[258,830,125,180]},
+ {target:[50.2,54.2,23.2,11.2],here:[590,840,165,170],away:[510,830,125,180]},
+ {target:[75.2,54.2,23.3,11.2],here:[840,838,175,175],away:[765,830,125,180]}
+];
+const menu=document.querySelector('.menu-wrap');
+function draw(service){
+ document.querySelectorAll('.switch-layer').forEach(x=>x.remove());
+ cells.forEach(cell=>{
+  const t=cell.target,c=cell[service],box=document.createElement('div');box.className='switch-layer';box.style.cssText=`left:${t[0]}%;top:${t[1]}%;width:${t[2]}%;height:${t[3]}%`;
+  box.innerHTML=`<svg viewBox="${c.join(' ')}" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><image href="${master}" x="0" y="0" width="1024" height="1536"/></svg>`;menu.appendChild(box);
+ });
+}
+document.querySelectorAll('.choice').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.choice').forEach(x=>x.classList.remove('active'));btn.classList.add('active');draw(btn.dataset.service)}));
+draw('here');
+const card=document.querySelector('.category-card'),cardTitle=card.querySelector('strong'),cardText=card.querySelector('span');
+document.querySelectorAll('.hotspot').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.hotspot').forEach(x=>x.classList.remove('active'));btn.classList.add('active');if(btn.dataset.category==='Hot Coffee'){window.scrollTo({top:document.querySelector('.menu-wrap').offsetTop+170,behavior:'smooth'});return}if(btn.dataset.category==='Dessert'){window.scrollTo({top:document.querySelector('.menu-wrap').offsetTop+1080,behavior:'smooth'});return}cardTitle.textContent=btn.dataset.category;cardText.textContent='این دسته فعال است. عکس، نام و قیمت محصولات این بخش را بفرستید تا داخل همین طراحی قرار بگیرد.';card.classList.add('show')}));
+card.querySelector('button').addEventListener('click',()=>card.classList.remove('show'));
+const toast=document.querySelector('.toast');let toastTimer;document.querySelectorAll('[data-info]').forEach(btn=>btn.addEventListener('click',()=>{toast.textContent=btn.dataset.info;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),3500)}));
+</script></body></html>
