@@ -1,5 +1,5 @@
 <!doctype html><html lang="fa" dir="rtl"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0e3c35"><meta name="description" content="منوی آنلاین کافه VERO"><title>VERO Coffee — منوی آنلاین</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#67d7c5"><meta name="description" content="منوی آنلاین کافه VERO"><title>VERO Coffee — منوی آنلاین</title>
 <link rel="preload" href="assets/vero-pvc-logo-hd.webp" as="image"><link rel="preload" href="assets/latte-cup-3d.webp" as="image">
 <style>
 :root{--green:#0d4239;--green2:#155b4e;--mint:#73d8c8;--mint2:#a8eee1;--paper:#fffaf1;--ink:#17332e;--muted:#6e7f79;--line:#d8e6df;--shadow:0 16px 46px rgba(15,58,51,.14)}
@@ -84,6 +84,22 @@ body{background:#031912}
 .brand::before,.brand::after{content:"";position:absolute;left:50%;pointer-events:none;transform:translateX(-50%);z-index:-1}
 .brand::before{top:-7px;bottom:-7px;width:calc(clamp(205px,57vw,245px) + 26px);border:1px solid var(--espresso-outline);border-radius:26px 10px 26px 10px;box-shadow:0 6px 18px rgba(20,12,8,.13)}
 .brand::after{top:-2px;bottom:-2px;width:calc(clamp(205px,57vw,245px) + 16px);border:1px solid var(--espresso-inner);border-radius:21px 6px 21px 6px}
+
+
+/* Tiffany page with dark green text panels. */
+:root{--paper:#67d7c5;--panel:#083c30}
+body,.app,.hero{background:var(--paper)}
+.hero,.hero h1,.hero-copy,.eyebrow,.vero-word,.section-title,.section-title span,.section>.desc,.empty{color:#083c30}
+.hero::before,.hero::after{border-color:rgba(8,60,48,.14)}
+.brand::before{background:var(--panel)}
+.service-wrap,.service,.service.active,.search,.tab,.tab.active,.item,.feature,.footer,.top,.mode-label{background:var(--panel);color:#edfff8}
+.service small,.service.active small,.service-title span{color:#bde9df}
+.service.active,.tab.active{background:#125345;box-shadow:inset 0 0 0 2px #83dfcc,0 4px 16px rgba(8,60,48,.15)}
+.sticky{background:rgba(103,215,197,.97);border-bottom-color:rgba(86,58,46,.35)}
+.search input{color:#edfff8}
+.search input::placeholder{color:#afd0c4}
+.top{color:#abefe0}
+button:focus-visible,input:focus-visible,a:focus-visible,.cups>[role="button"]:focus-visible{outline-color:#563a2e}
 
 </style>
 <!-- Embedded Vazirmatn font license:
