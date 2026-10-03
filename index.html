@@ -1,99 +1,92 @@
 <!doctype html><html lang="fa" dir="rtl"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07100f">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#8be6dc">
 <meta name="description" content="منوی آنلاین کافه VERO"><title>منوی VERO</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307100f'/%3E%3Cpath d='M16 17l16 33 16-33h-9l-7 17-7-17z' fill='%236ce0d3'/%3E%3C/svg%3E">
 <style>
-:root{--ink:#effcf9;--muted:#9fbcb7;--deep:#07100f;--brown:#160e0a;--forest:#164c43;--forest2:#0d352f;--tiffany:#67ded1;--line:rgba(65,171,155,.28);--card:rgba(8,21,19,.94)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;background-color:#0b0705;background-image:radial-gradient(ellipse at 15% 18%,rgba(78,42,24,.2) 0,transparent 34%),radial-gradient(ellipse at 82% 72%,rgba(55,29,17,.14) 0,transparent 38%),repeating-linear-gradient(1deg,rgba(7,4,3,.82) 0 2px,transparent 3px 17px,rgba(70,38,23,.18) 18px 20px,transparent 21px 34px),repeating-linear-gradient(91deg,transparent 0 230px,rgba(0,0,0,.52) 231px 234px,rgba(75,40,23,.13) 235px 237px,transparent 238px 465px),linear-gradient(135deg,#160d09,#080605 54%,#120b08);background-attachment:fixed;min-height:100vh}
-.shell{width:min(100%,560px);margin:auto;min-height:100vh;background:linear-gradient(180deg,rgba(2,12,11,.22),rgba(2,12,11,.78));box-shadow:0 0 90px rgba(0,0,0,.7)}
-header{padding:22px 20px 18px;text-align:center;background:transparent}.brand-logo{display:block;width:min(78%,340px);height:auto;margin:auto;padding:14px 18px;background:linear-gradient(145deg,#def5f0,#bfe8df);border:1px solid #69402e;border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,.25),inset 0 0 0 1px rgba(255,255,255,.3);filter:saturate(1.18) contrast(1.12)}
-.tools{position:sticky;top:0;z-index:10;padding:12px 16px 11px;background:rgba(5,18,16,.95);backdrop-filter:blur(18px);border-block:1px solid var(--line)}
-.service-mode{display:flex;align-items:center;justify-content:center;width:100%;margin:0 auto 11px}.mode-visuals{display:flex;align-items:center;justify-content:center;gap:8px;direction:ltr}.mode-visuals img{width:76px;height:86px;object-fit:contain;filter:saturate(1.04) contrast(1.03);opacity:.92}
-.search{display:flex;align-items:center;gap:8px;background:rgba(103,222,209,.06);border:1px solid var(--line);border-radius:15px;padding:0 13px;margin-bottom:10px}.search span{color:var(--tiffany);font-size:1.2rem}.search input{width:100%;border:0;outline:0;color:var(--ink);background:transparent;padding:12px 4px;font:inherit}.search input::placeholder{color:#78928e}
-.tabs{display:flex;gap:8px;overflow:auto;scrollbar-width:none;padding-bottom:2px}.tabs::-webkit-scrollbar{display:none}.tab{flex:0 0 auto;border:1px solid #23695f;color:#bde7e1;background:rgba(22,76,67,.38);border-radius:999px;padding:8px 14px;font:inherit;cursor:pointer}.tab.active{background:linear-gradient(135deg,var(--forest),var(--tiffany));color:#f4fffd;border-color:var(--tiffany);font-weight:700}
-main{padding:22px 16px 92px}.page-turn-out{animation:pageTurnOut .34s cubic-bezier(.55,.08,.68,.53) both}.page-turn-in{animation:pageTurnIn .46s cubic-bezier(.22,.78,.24,1) both}@keyframes pageTurnOut{0%{clip-path:inset(0 0 0 0 round 0);opacity:1;filter:brightness(1) drop-shadow(0 0 0 transparent)}55%{clip-path:polygon(0 0,48% 4%,58% 96%,0 100%);opacity:.72;filter:brightness(.82) drop-shadow(12px 4px 12px rgba(0,0,0,.45))}100%{clip-path:inset(0 100% 0 0);opacity:0;filter:brightness(.62) drop-shadow(18px 5px 16px rgba(0,0,0,.55))}}@keyframes pageTurnIn{0%{clip-path:inset(0 0 0 100%);opacity:0;filter:brightness(.68) drop-shadow(-18px 5px 16px rgba(0,0,0,.55))}58%{clip-path:polygon(42% 4%,100% 0,100% 100%,32% 96%);opacity:.9;filter:brightness(.94) drop-shadow(-12px 4px 12px rgba(0,0,0,.4))}100%{clip-path:inset(0 0 0 0 round 0);opacity:1;filter:brightness(1) drop-shadow(0 0 0 transparent)}}.section{margin-bottom:30px}.section h2{display:flex;align-items:center;gap:11px;font-size:1.2rem;color:#89e8dc;margin:0 3px 13px}.section h2:after{content:"";height:2px;flex:1;background:linear-gradient(90deg,transparent,var(--forest),var(--tiffany))}
-.menu{display:grid;gap:12px}.item{display:grid;grid-template-columns:86px 1fr;align-items:stretch;overflow:hidden;background:linear-gradient(135deg,rgba(13,53,47,.96),rgba(18,16,11,.96));border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 32px rgba(0,0,0,.27)}.item>.menu-thumb{display:block;width:86px;height:86px;min-height:86px;align-self:center;object-fit:cover;object-position:center;background:#0a1816;padding:4px;filter:saturate(.98) contrast(1.05) brightness(.9)}.details{padding:14px 15px 16px;display:grid;grid-template-columns:1fr auto;align-content:center;gap:6px 10px}.item h3{font-size:1rem;margin:0}.price{color:#80e5d8;font-weight:700;white-space:nowrap}.desc{grid-column:1/-1;margin:0;color:var(--muted);font-size:.78rem;line-height:1.7}.tag{display:inline-block;color:#effcf9;background:var(--forest);border:1px solid var(--tiffany);padding:2px 6px;border-radius:7px;font-size:.63rem;margin-right:4px;vertical-align:2px}
-.latte-item{grid-column:1/-1;grid-template-columns:1fr;min-height:300px;overflow:visible;perspective:900px;background:radial-gradient(circle at 50% 35%,rgba(103,222,209,.12),transparent 42%),linear-gradient(135deg,rgba(13,53,47,.98),rgba(18,16,11,.96))}
-.latte-stage{display:grid;place-items:center;min-height:225px;perspective:850px;overflow:visible;position:relative}.latte-stage:after{content:"";position:absolute;width:48%;height:13%;bottom:12%;border-radius:50%;background:rgba(0,0,0,.52);filter:blur(12px);transform:scale(var(--shadow-scale,.75));opacity:var(--shadow-opacity,.34)}
-.item .latte-cup{position:relative;z-index:1;width:155px;height:auto;min-height:0;object-fit:contain;filter:drop-shadow(0 8px 8px rgba(0,0,0,.18));transform-origin:50% 76%;transform:perspective(850px) rotateX(var(--cup-rotate,72deg)) translateY(var(--cup-y,18px)) scale(var(--cup-scale,.78));will-change:transform,filter}
-@media(prefers-reduced-motion:reduce){.item .latte-cup{transform:none}.latte-stage:after{opacity:.25}.page-turn-out,.page-turn-in{animation:none}}
-.empty{display:none;text-align:center;color:var(--muted);padding:45px 10px}.notice{margin:4px 0 0;text-align:center;color:#78928e;font-size:.75rem;line-height:1.8}.top{position:fixed;left:max(18px,calc(50% - 258px));bottom:18px;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;background:#0a1f1c;color:var(--tiffany);font-size:1.25rem;display:grid;place-items:center;text-decoration:none}
-@media(min-width:760px){.shell{margin-block:28px;min-height:calc(100vh - 56px);border-radius:26px;overflow:hidden}.menu{grid-template-columns:1fr 1fr}.item>.menu-thumb{height:86px}}
+:root{--ink:#123e35;--muted:#3d645c;--tiffany:#8be6dc;--line:rgba(72,44,30,.2)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;background:#8be6dc;min-height:100vh;line-height:1.7}
+.shell{width:min(100%,700px);margin:auto;min-height:100vh;padding:0 22px}
+header{padding:26px 0 16px;text-align:center;position:relative;border-bottom:1px solid var(--line)}.brand-logo{display:block;width:min(80%,280px);height:auto;margin:auto}.latte-stage{height:94px;display:grid;place-items:center;margin-top:6px}.latte-cup{width:108px;height:94px;object-fit:contain}
+.tools{position:sticky;top:0;z-index:10;padding:14px 0;background:rgba(139,230,220,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.tabs{display:flex;gap:8px;overflow:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tab{flex:0 0 auto;border:1px solid transparent;color:var(--ink);background:transparent;border-radius:999px;padding:8px 12px;font:inherit;font-size:.875rem;cursor:pointer}.tab.active{background:var(--ink);color:#d8fff8}.tab:hover{border-color:var(--ink)}.tab:focus-visible,.top:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+main{padding:24px 0 66px;scroll-margin-top:85px}.menu-caption{display:flex;justify-content:space-between;font-size:.875rem;color:var(--muted);margin-bottom:30px}.section{margin-bottom:38px}.section[hidden]{display:none}.section h2{display:flex;align-items:center;gap:18px;font-size:1.2rem;letter-spacing:0;margin:0 0 12px;font-weight:700}.section h2:after{content:"";height:1px;flex:1;background:var(--ink);opacity:.35}
+.menu{display:grid;grid-template-columns:1fr;gap:0}.item{padding:18px 0;border-bottom:1px solid var(--line)}.details{display:flex;align-items:baseline;justify-content:space-between;gap:22px}.item h3{font-size:1rem;font-weight:400;margin:0;min-width:0;line-height:1.9}.price{font-size:1rem;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums;flex-shrink:0;color:#183e34;min-width:3ch;text-align:left}
+.notice{margin:0;text-align:center;color:var(--muted);font-size:.875rem;line-height:1.9}.top{position:fixed;left:max(16px,calc(50% - 330px));bottom:18px;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:#123e35;color:#baf7ee;font-size:1.25rem;display:grid;place-items:center;text-decoration:none}
+@media(min-width:760px){.shell{padding:0 48px}header{padding-top:40px}.section{margin-bottom:44px}.item{padding:20px 0}.item h3,.price{font-size:1.0625rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.service-mode{display:flex;justify-content:center;margin:0 0 12px}.mode-visuals{display:flex;justify-content:center;gap:10px}.mode-visuals img{width:65px;height:70px;object-fit:contain}.tools{position:relative}.brand-logo{filter:none;padding:0;border:0;border-radius:0;box-shadow:none;background:none}
 </style></head><body id="top"><div class="shell">
 <header><img class="brand-logo" src="assets/vero-pvc-logo-hd.webp?v=e552d53" alt="لوگوی VERO Coffee Roastery"></header>
 <nav class="tools" aria-label="دسته‌بندی منو"><div class="service-mode" aria-hidden="true"><div class="mode-visuals"><img src="assets/dine-in-cup.webp" alt=""><img src="assets/takeaway-cup.webp" alt=""></div></div><div class="tabs"><button class="tab" data-cat="breakfast">صبحانه</button><button class="tab" data-cat="hot">گرم بر پایه قهوه</button><button class="tab" data-cat="cold">سرد بر پایه قهوه</button><button class="tab" data-cat="mocktail">ماکتل‌ها</button><button class="tab" data-cat="noncoffee">بدون قهوه</button><button class="tab" data-cat="tea">چای و دمنوش</button><button class="tab" data-cat="shake">شیک‌ها</button></div></nav>
-<main>
+<main><div class="menu-caption"><span>منوی کافه</span><span>هزار تومان</span></div>
 <section class="section" data-section="breakfast"><h2>صبحانه</h2><div class="menu">
-<article class="item"><img class="menu-thumb" src="assets/item-sausage-eggs.webp" alt="سوسیس تخم‌مرغ" loading="lazy" decoding="async"><div class="details"><h3>سوسیس تخم‌مرغ</h3><span class="price">۲۱۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-lentil-soup.webp" alt="عدسی" loading="lazy" decoding="async"><div class="details"><h3>عدسی</h3><span class="price">۱۴۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-tomato-eggs.webp" alt="تخم‌مرغ ربی" loading="lazy" decoding="async"><div class="details"><h3>تخم‌مرغ ربی</h3><span class="price">۱۶۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-iranian-breakfast.webp" alt="صبحونه ایرانی" loading="lazy" decoding="async"><div class="details"><h3>صبحونه ایرانی</h3><span class="price">۳۲۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-tuna-eggs.webp" alt="تن ماهی و تخم‌مرغ" loading="lazy" decoding="async"><div class="details"><h3>تن ماهی و تخم‌مرغ</h3><span class="price">۲۹۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-date-eggs.webp" alt="خرما تخم‌مرغ" loading="lazy" decoding="async"><div class="details"><h3>خرما تخم‌مرغ</h3><span class="price">۱۹۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-shapouri.webp" alt="صبحونه شاپوری" loading="lazy" decoding="async"><div class="details"><h3>صبحونه شاپوری</h3><span class="price">۲۴۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-garnished-eggs.webp" alt="تخم‌مرغ دورچینی" loading="lazy" decoding="async"><div class="details"><h3>تخم‌مرغ دورچینی</h3><span class="price">۱۴۵ ت</span></div></article>
+<article class="item"><div class="details"><h3>سوسیس تخم‌مرغ</h3><span class="price">۲۱۰</span></div></article>
+<article class="item"><div class="details"><h3>عدسی</h3><span class="price">۱۴۰</span></div></article>
+<article class="item"><div class="details"><h3>تخم‌مرغ ربی</h3><span class="price">۱۶۰</span></div></article>
+<article class="item"><div class="details"><h3>صبحونه ایرانی</h3><span class="price">۳۲۰</span></div></article>
+<article class="item"><div class="details"><h3>تن ماهی و تخم‌مرغ</h3><span class="price">۲۹۰</span></div></article>
+<article class="item"><div class="details"><h3>خرما تخم‌مرغ</h3><span class="price">۱۹۰</span></div></article>
+<article class="item"><div class="details"><h3>صبحونه شاپوری</h3><span class="price">۲۴۰</span></div></article>
+<article class="item"><div class="details"><h3>تخم‌مرغ دورچینی</h3><span class="price">۱۴۵</span></div></article>
 </div></section>
 <section class="section" data-section="hot"><h2>گرم بر پایه قهوه</h2><div class="menu">
-<article class="item"><img class="menu-thumb" src="assets/item-espresso-single.webp" alt="اسپرسو سینگل" loading="lazy" decoding="async"><div class="details"><h3>اسپرسو سینگل</h3><span class="price">۹۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-espresso-double.webp" alt="اسپرسو دابل" loading="lazy" decoding="async"><div class="details"><h3>اسپرسو دابل</h3><span class="price">۱۱۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-americano.webp" alt="آمریکانو" loading="lazy" decoding="async"><div class="details"><h3>آمریکانو</h3><span class="price">۱۴۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-latte.webp" alt="لاته" loading="lazy" decoding="async"><div class="details"><h3>لاته</h3><span class="price">۱۹۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-cappuccino.webp" alt="کاپوچینو" loading="lazy" decoding="async"><div class="details"><h3>کاپوچینو</h3><span class="price">۱۸۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-caramel-macchiato.webp" alt="کارامل ماکیاتو" loading="lazy" decoding="async"><div class="details"><h3>کارامل ماکیاتو</h3><span class="price">۲۳۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-mocha.webp" alt="موکا" loading="lazy" decoding="async"><div class="details"><h3>موکا</h3><span class="price">۲۴۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-spanish-latte.webp" alt="اسپانیش لاته" loading="lazy" decoding="async"><div class="details"><h3>اسپانیش لاته</h3><span class="price">۲۵۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-affogato.webp" alt="آفوگاتو" loading="lazy" decoding="async"><div class="details"><h3>آفوگاتو</h3><span class="price">۱۹۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-turkish-coffee.webp" alt="قهوه ترک" loading="lazy" decoding="async"><div class="details"><h3>قهوه ترک</h3><span class="price">۱۲۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-greek-coffee.webp" alt="یونانی" loading="lazy" decoding="async"><div class="details"><h3>یونانی</h3><span class="price">۱۴۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-safavi-coffee.webp" alt="صفوی" loading="lazy" decoding="async"><div class="details"><h3>صفوی</h3><span class="price">۱۸۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-french-coffee.webp" alt="فرانسه" loading="lazy" decoding="async"><div class="details"><h3>فرانسه</h3><span class="price">۱۷۵ ت</span></div></article>
+<article class="item"><div class="details"><h3>اسپرسو سینگل</h3><span class="price">۹۰</span></div></article>
+<article class="item"><div class="details"><h3>اسپرسو دابل</h3><span class="price">۱۱۰</span></div></article>
+<article class="item"><div class="details"><h3>آمریکانو</h3><span class="price">۱۴۵</span></div></article>
+<article class="item"><div class="details"><h3>لاته</h3><span class="price">۱۹۵</span></div></article>
+<article class="item"><div class="details"><h3>کاپوچینو</h3><span class="price">۱۸۵</span></div></article>
+<article class="item"><div class="details"><h3>کارامل ماکیاتو</h3><span class="price">۲۳۵</span></div></article>
+<article class="item"><div class="details"><h3>موکا</h3><span class="price">۲۴۰</span></div></article>
+<article class="item"><div class="details"><h3>اسپانیش لاته</h3><span class="price">۲۵۰</span></div></article>
+<article class="item"><div class="details"><h3>آفوگاتو</h3><span class="price">۱۹۰</span></div></article>
+<article class="item"><div class="details"><h3>قهوه ترک</h3><span class="price">۱۲۵</span></div></article>
+<article class="item"><div class="details"><h3>یونانی</h3><span class="price">۱۴۵</span></div></article>
+<article class="item"><div class="details"><h3>صفوی</h3><span class="price">۱۸۵</span></div></article>
+<article class="item"><div class="details"><h3>فرانسه</h3><span class="price">۱۷۵</span></div></article>
 </div></section>
 <section class="section" data-section="cold"><h2>سرد بر پایه قهوه</h2><div class="menu">
-<article class="item"><img class="menu-thumb" src="assets/item-iced-americano.webp" alt="آیس آمریکانو" loading="lazy" decoding="async"><div class="details"><h3>آیس آمریکانو</h3><span class="price">۱۶۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-tiramisu-affogato.webp" alt="آفوگاتو تیرامیسو" loading="lazy" decoding="async"><div class="details"><h3>آفوگاتو تیرامیسو</h3><span class="price">۲۲۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-iced-latte.webp" alt="آیس لاته" loading="lazy" decoding="async"><div class="details"><h3>آیس لاته</h3><span class="price">۲۰۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-iced-mocha.webp" alt="آیس موکا" loading="lazy" decoding="async"><div class="details"><h3>آیس موکا</h3><span class="price">۲۵۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-iced-caramel-macchiato.webp" alt="آیس کارامل ماکیاتو" loading="lazy" decoding="async"><div class="details"><h3>آیس کارامل ماکیاتو</h3><span class="price">۲۴۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-espresso-cocktail.webp" alt="کوکتل اسپرسو" loading="lazy" decoding="async"><div class="details"><h3>کوکتل اسپرسو</h3><span class="price">۱۷۵ ت</span></div></article>
+<article class="item"><div class="details"><h3>آیس آمریکانو</h3><span class="price">۱۶۵</span></div></article>
+<article class="item"><div class="details"><h3>آفوگاتو تیرامیسو</h3><span class="price">۲۲۰</span></div></article>
+<article class="item"><div class="details"><h3>آیس لاته</h3><span class="price">۲۰۵</span></div></article>
+<article class="item"><div class="details"><h3>آیس موکا</h3><span class="price">۲۵۰</span></div></article>
+<article class="item"><div class="details"><h3>آیس کارامل ماکیاتو</h3><span class="price">۲۴۵</span></div></article>
+<article class="item"><div class="details"><h3>کوکتل اسپرسو</h3><span class="price">۱۷۵</span></div></article>
 </div></section>
 <section class="section" data-section="mocktail"><h2>ماکتل‌ها</h2><div class="menu">
-<article class="item"><img class="menu-thumb" src="assets/item-mojito.webp" alt="موهیتو" loading="lazy" decoding="async"><div class="details"><h3>موهیتو</h3><span class="price">۱۸۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-lemonade.webp" alt="لیموناد" loading="lazy" decoding="async"><div class="details"><h3>لیموناد</h3><span class="price">۱۷۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-ginger-lemonade.webp" alt="جینجر لیموناد" loading="lazy" decoding="async"><div class="details"><h3>جینجر لیموناد</h3><span class="price">۲۱۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-galaxy.webp" alt="گالاکسی" loading="lazy" decoding="async"><div class="details"><h3>گالاکسی</h3><span class="price">۲۸۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-saffron-punch.webp" alt="پانچ زعفران" loading="lazy" decoding="async"><div class="details"><h3>پانچ زعفران</h3><span class="price">۲۴۰ ت</span></div></article>
+<article class="item"><div class="details"><h3>موهیتو</h3><span class="price">۱۸۵</span></div></article>
+<article class="item"><div class="details"><h3>لیموناد</h3><span class="price">۱۷۵</span></div></article>
+<article class="item"><div class="details"><h3>جینجر لیموناد</h3><span class="price">۲۱۵</span></div></article>
+<article class="item"><div class="details"><h3>گالاکسی</h3><span class="price">۲۸۰</span></div></article>
+<article class="item"><div class="details"><h3>پانچ زعفران</h3><span class="price">۲۴۰</span></div></article>
 </div></section>
 <section class="section" data-section="noncoffee"><h2>نوشیدنی‌های بدون قهوه</h2><div class="menu">
-<article class="item"><img class="menu-thumb" src="assets/item-hot-chocolate.webp" alt="هات چاکلت" loading="lazy" decoding="async"><div class="details"><h3>هات چاکلت</h3><span class="price">۱۶۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-peanut-chocolate.webp" alt="پینات چاکلت" loading="lazy" decoding="async"><div class="details"><h3>پینات چاکلت</h3><span class="price">۲۰۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-masala.webp" alt="ماسالا" loading="lazy" decoding="async"><div class="details"><h3>ماسالا</h3><span class="price">۱۶۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-ginger-lime.webp" alt="جینجر لایم" loading="lazy" decoding="async"><div class="details"><h3>جینجر لایم</h3><span class="price">۱۶۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-cinnamon-apple.webp" alt="سینامون اپل" loading="lazy" decoding="async"><div class="details"><h3>سینامون اپل</h3><span class="price">۱۵۰ ت</span></div></article>
+<article class="item"><div class="details"><h3>هات چاکلت</h3><span class="price">۱۶۵</span></div></article>
+<article class="item"><div class="details"><h3>پینات چاکلت</h3><span class="price">۲۰۵</span></div></article>
+<article class="item"><div class="details"><h3>ماسالا</h3><span class="price">۱۶۵</span></div></article>
+<article class="item"><div class="details"><h3>جینجر لایم</h3><span class="price">۱۶۵</span></div></article>
+<article class="item"><div class="details"><h3>سینامون اپل</h3><span class="price">۱۵۰</span></div></article>
 </div></section>
 <section class="section" data-section="tea"><h2>چای و دمنوش</h2><div class="menu">
-<article class="item"><img class="menu-thumb" src="assets/item-black-tea.webp" alt="چای سیاه" loading="lazy" decoding="async"><div class="details"><h3>چای سیاه</h3><span class="price">۴۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-green-tea.webp" alt="چای سبز" loading="lazy" decoding="async"><div class="details"><h3>چای سبز</h3><span class="price">۸۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-relax-tea.webp" alt="دمنوش آرامش" loading="lazy" decoding="async"><div class="details"><h3>دمنوش آرامش</h3><span class="price">۹۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-borage-tea.webp" alt="دمنوش گل گاوزبان" loading="lazy" decoding="async"><div class="details"><h3>دمنوش گل گاوزبان</h3><span class="price">۹۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-moroccan-tea.webp" alt="چای مراکشی" loading="lazy" decoding="async"><div class="details"><h3>چای مراکشی</h3><span class="price">۹۵ ت</span></div></article>
+<article class="item"><div class="details"><h3>چای سیاه</h3><span class="price">۴۵</span></div></article>
+<article class="item"><div class="details"><h3>چای سبز</h3><span class="price">۸۰</span></div></article>
+<article class="item"><div class="details"><h3>دمنوش آرامش</h3><span class="price">۹۰</span></div></article>
+<article class="item"><div class="details"><h3>دمنوش گل گاوزبان</h3><span class="price">۹۰</span></div></article>
+<article class="item"><div class="details"><h3>چای مراکشی</h3><span class="price">۹۵</span></div></article>
 </div></section>
 <section class="section" data-section="shake"><h2>شیک‌ها</h2><div class="menu">
-<article class="item"><img class="menu-thumb" src="assets/item-vanilla-shake.webp" alt="شیک وانیل" loading="lazy" decoding="async"><div class="details"><h3>شیک وانیل</h3><span class="price">۲۲۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-chocolate-shake.webp" alt="شیک شکلات" loading="lazy" decoding="async"><div class="details"><h3>شیک شکلات</h3><span class="price">۲۵۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-lotus-shake.webp" alt="شیک لوتوس" loading="lazy" decoding="async"><div class="details"><h3>شیک لوتوس</h3><span class="price">۲۹۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-coconut-shake.webp" alt="شیک نارگیل" loading="lazy" decoding="async"><div class="details"><h3>شیک نارگیل</h3><span class="price">۲۴۵ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-vero-special.webp" alt="معجون مخصوص ورو" loading="lazy" decoding="async"><div class="details"><h3>معجون مخصوص ورو</h3><span class="price">۳۹۰ ت</span></div></article>
-<article class="item"><img class="menu-thumb" src="assets/item-nutella-shake.webp" alt="شیک نوتلا" loading="lazy" decoding="async"><div class="details"><h3>شیک نوتلا</h3><span class="price">۲۹۰ ت</span></div></article>
+<article class="item"><div class="details"><h3>شیک وانیل</h3><span class="price">۲۲۰</span></div></article>
+<article class="item"><div class="details"><h3>شیک شکلات</h3><span class="price">۲۵۰</span></div></article>
+<article class="item"><div class="details"><h3>شیک لوتوس</h3><span class="price">۲۹۰</span></div></article>
+<article class="item"><div class="details"><h3>شیک نارگیل</h3><span class="price">۲۴۵</span></div></article>
+<article class="item"><div class="details"><h3>معجون مخصوص ورو</h3><span class="price">۳۹۰</span></div></article>
+<article class="item"><div class="details"><h3>شیک نوتلا</h3><span class="price">۲۹۰</span></div></article>
 </div></section>
 <p class="notice">قیمت‌ها به هزار تومان هستند و ممکن است تغییر کنند.</p>
 </main><a class="top" href="#top" aria-label="بازگشت به بالا">↑</a></div>
 <script>
-const tabs=[...document.querySelectorAll('.tab')],sections=[...document.querySelectorAll('.section')],menuMain=document.querySelector('main');
-let pageTurning=false;
-function showCategory(t){const active=t.classList.contains('active');tabs.forEach(x=>x.classList.remove('active'));sections.forEach(s=>s.hidden=false);if(!active){t.classList.add('active');sections.forEach(s=>s.hidden=s.dataset.section!==t.dataset.cat)}scrollTo({top:Math.max(0,menuMain.offsetTop-document.querySelector('.tools').offsetHeight-8),behavior:'smooth'});updateLatte()}
-tabs.forEach(t=>t.addEventListener('click',()=>{if(pageTurning)return;if(reduceMotion){showCategory(t);return}pageTurning=true;menuMain.classList.remove('page-turn-in');menuMain.classList.add('page-turn-out');setTimeout(()=>{showCategory(t);menuMain.classList.remove('page-turn-out');menuMain.classList.add('page-turn-in');setTimeout(()=>{menuMain.classList.remove('page-turn-in');menuMain.style.display='none';void menuMain.offsetHeight;menuMain.style.display='';pageTurning=false},470)},350)}));
-const latte=document.querySelector('#latte-item'),reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;let ticking=false;
-function updateLatte(){if(reduceMotion||!latte||latte.hidden)return;const r=latte.getBoundingClientRect(),center=r.top+r.height/2,range=innerHeight*.58,distance=Math.min(1,Math.abs(center-innerHeight/2)/range),lift=1-distance,rotate=72*(1-lift),scale=.78+.3*lift,y=18-40*lift;latte.style.setProperty('--cup-rotate',rotate.toFixed(2)+'deg');latte.style.setProperty('--cup-scale',scale.toFixed(3));latte.style.setProperty('--cup-y',y.toFixed(2)+'px');latte.style.setProperty('--shadow-scale',(.72+.38*lift).toFixed(3));latte.style.setProperty('--shadow-opacity',(.3+.3*lift).toFixed(3))}
-addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{updateLatte();ticking=false});ticking=true}},{passive:true});addEventListener('resize',updateLatte);updateLatte();
+const tabs=[...document.querySelectorAll('.tab')],sections=[...document.querySelectorAll('.section')];
+tabs.forEach(t=>{t.setAttribute('aria-pressed','false');t.addEventListener('click',()=>{const active=t.classList.contains('active');tabs.forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});sections.forEach(s=>s.hidden=false);if(!active){t.classList.add('active');t.setAttribute('aria-pressed','true');sections.forEach(s=>s.hidden=s.dataset.section!==t.dataset.cat)}document.querySelector('main').scrollIntoView({block:'start'});})});
 </script>
 </body></html>
+
