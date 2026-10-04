@@ -19,9 +19,10 @@ main{padding:22px 16px 92px}.page-turn-out{animation:pageTurnOut .34s cubic-bezi
 @media(prefers-reduced-motion:reduce){.item .latte-cup{transform:none}.latte-stage:after{opacity:.25}.page-turn-out,.page-turn-in{animation:none}}
 .empty{display:none;text-align:center;color:var(--muted);padding:45px 10px}.notice{margin:4px 0 0;text-align:center;color:#78928e;font-size:.75rem;line-height:1.8}.top{position:fixed;left:max(18px,calc(50% - 258px));bottom:18px;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;background:#0a1f1c;color:var(--tiffany);font-size:1.25rem;display:grid;place-items:center;text-decoration:none}
 @media(min-width:760px){.shell{margin-block:28px;min-height:calc(100vh - 56px);border-radius:26px;overflow:hidden}.menu{grid-template-columns:1fr 1fr}.item>.menu-thumb{height:86px}}
+.item.no-image{grid-template-columns:1fr;min-height:86px}
 </style></head><body id="top"><div class="shell">
 <header><img class="brand-logo" src="assets/vero-pvc-logo-hd.webp?v=e552d53" alt="لوگوی VERO Coffee Roastery"></header>
-<nav class="tools" aria-label="دسته‌بندی منو"><div class="service-mode" aria-hidden="true"><div class="mode-visuals"><img src="assets/dine-in-cup.webp" alt=""><img src="assets/takeaway-cup.webp" alt=""></div></div><div class="tabs"><button class="tab" data-cat="breakfast">صبحانه</button><button class="tab" data-cat="hot">گرم بر پایه قهوه</button><button class="tab" data-cat="cold">سرد بر پایه قهوه</button><button class="tab" data-cat="mocktail">ماکتل‌ها</button><button class="tab" data-cat="noncoffee">بدون قهوه</button><button class="tab" data-cat="tea">چای و دمنوش</button><button class="tab" data-cat="shake">شیک‌ها</button></div></nav>
+<nav class="tools" aria-label="دسته‌بندی منو"><div class="service-mode" aria-hidden="true"><div class="mode-visuals"><img src="assets/dine-in-cup.webp" alt=""><img src="assets/takeaway-cup.webp" alt=""></div></div><div class="tabs"><button class="tab" data-cat="breakfast">صبحانه</button><button class="tab" data-cat="hot">گرم بر پایه قهوه</button><button class="tab" data-cat="cold">سرد بر پایه قهوه</button><button class="tab" data-cat="mocktail">ماکتل‌ها</button><button class="tab" data-cat="noncoffee">بدون قهوه</button><button class="tab" data-cat="tea">چای و دمنوش</button><button class="tab" data-cat="shake">شیک‌ها</button><button class="tab" data-cat="softdrinks">سافت‌درینک‌ها</button></div></nav>
 <main>
 <section class="section" data-section="breakfast"><h2>صبحانه</h2><div class="menu">
 <article class="item"><img class="menu-thumb" src="assets/item-sausage-eggs.webp" alt="سوسیس تخم‌مرغ" loading="lazy" decoding="async"><div class="details"><h3>سوسیس تخم‌مرغ</h3><span class="price">۲۱۰ ت</span></div></article>
@@ -84,6 +85,13 @@ main{padding:22px 16px 92px}.page-turn-out{animation:pageTurnOut .34s cubic-bezi
 <article class="item"><img class="menu-thumb" src="assets/item-coconut-shake.webp" alt="شیک نارگیل" loading="lazy" decoding="async"><div class="details"><h3>شیک نارگیل</h3><span class="price">۲۴۵ ت</span></div></article>
 <article class="item"><img class="menu-thumb" src="assets/item-vero-special.webp" alt="معجون مخصوص ورو" loading="lazy" decoding="async"><div class="details"><h3>معجون مخصوص ورو</h3><span class="price">۳۹۰ ت</span></div></article>
 <article class="item"><img class="menu-thumb" src="assets/item-nutella-shake.webp" alt="شیک نوتلا" loading="lazy" decoding="async"><div class="details"><h3>شیک نوتلا</h3><span class="price">۲۹۰ ت</span></div></article>
+</div></section>
+<section class="section" data-section="softdrinks"><h2>سافت‌درینک‌ها</h2><div class="menu">
+<article class="item no-image"><div class="details"><h3>کوکاکولا</h3><span class="price">۸۵ ت</span></div></article>
+<article class="item no-image"><div class="details"><h3>فانتا</h3><span class="price">۸۵ ت</span></div></article>
+<article class="item no-image"><div class="details"><h3>اسپرایت</h3><span class="price">۸۵ ت</span></div></article>
+<article class="item no-image"><div class="details"><h3>ماءالشعیر کرونا</h3><span class="price">۳۰۰ ت</span></div></article>
+<article class="item no-image"><div class="details"><h3>نوشابه انرژی‌زا</h3><span class="price"></span></div></article>
 </div></section>
 <p class="notice">قیمت‌ها به هزار تومان هستند و ممکن است تغییر کنند.</p>
 </main><a class="top" href="#top" aria-label="بازگشت به بالا">↑</a></div>
