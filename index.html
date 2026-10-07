@@ -115,4 +115,40 @@ const latte=document.querySelector('#latte-item'),reduceMotion=matchMedia('(pref
 function updateLatte(){if(reduceMotion||!latte||latte.hidden)return;const r=latte.getBoundingClientRect(),center=r.top+r.height/2,range=innerHeight*.58,distance=Math.min(1,Math.abs(center-innerHeight/2)/range),lift=1-distance,rotate=72*(1-lift),scale=.78+.3*lift,y=18-40*lift;latte.style.setProperty('--cup-rotate',rotate.toFixed(2)+'deg');latte.style.setProperty('--cup-scale',scale.toFixed(3));latte.style.setProperty('--cup-y',y.toFixed(2)+'px');latte.style.setProperty('--shadow-scale',(.72+.38*lift).toFixed(3));latte.style.setProperty('--shadow-opacity',(.3+.3*lift).toFixed(3))}
 addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{updateLatte();ticking=false});ticking=true}},{passive:true});addEventListener('resize',updateLatte);updateLatte();
 </script>
+
+<script>
+(function(){
+ const endpoint='https://vero-register.saeidgeranmayeh95.chatgpt.site/api/menu';
+ let signature='',busy=false;
+ async function refreshSharedMenu(){
+  if(busy||document.hidden)return;busy=true;
+  try{
+   const response=await fetch(endpoint,{cache:'no-store'});
+   if(!response.ok)throw Error('menu unavailable');
+   const data=await response.json();
+   if(!Array.isArray(data.menu)||!data.menu.length)throw Error('empty menu');
+   const next=JSON.stringify(data.menu);
+   if(next===signature)return;
+   for(const section of document.querySelectorAll('[data-section]')){
+    const grid=section.querySelector('.menu');if(!grid)continue;
+    const fragment=document.createDocumentFragment();
+    for(const item of data.menu.filter(i=>i.category===section.dataset.section)){
+     const card=document.createElement('article');card.className='item';
+     if(item.image&&/^https:\/\//.test(item.image)){
+      const img=document.createElement('img');img.className='menu-thumb';img.src=item.image;img.alt=item.name;img.loading='lazy';img.decoding='async';card.append(img);
+     }else card.classList.add('no-image');
+     const details=document.createElement('div');details.className='details';
+     const name=document.createElement('h3');name.textContent=item.name;
+     const price=document.createElement('span');price.className='price';price.textContent=(item.price||'قیمت هنگام سفارش').replace(/[0-9]/g,n=>'۰۱۲۳۴۵۶۷۸۹'[Number(n)]);
+     details.append(name,price);card.append(details);fragment.append(card);
+    }
+    grid.replaceChildren(fragment);
+   }
+   signature=next;
+  }catch(e){/* Keep the last complete menu if temporarily offline. */}
+  finally{busy=false}
+ }
+ refreshSharedMenu();setInterval(refreshSharedMenu,15000);addEventListener('focus',refreshSharedMenu);
+})();
+</script>
 </body></html>
